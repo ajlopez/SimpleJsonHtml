@@ -19,8 +19,6 @@ Reference in your program:
 var sjh = require('simplejsonhtml');
 ```
 
-TBD
-
 ## Development
 
 ```
@@ -32,7 +30,23 @@ npm test
 
 ## Samples
 
-TBD
+```js
+sjh.transform("Hello");         // "Hello"
+sjh.transform({ h1: "Hello" }); // "<h1>Hello</h1>"
+sjh.transform(
+    { h1: "Hello ${name}" },
+    { name: 'Adam' });          // "<h1>Hello Adam</h1>"
+sjh.transform(
+    [{ h1: "Hello" }, { h1: "${name}" }],
+    { name: 'Adam' });          // "<h1>Hello</h1><h1>Adam</h1>"
+sjh.transform(
+    { h1: { "class": "main", "html": "Hello ${name}" },
+    { name: 'Adam' });          // "<h1 class='main'>Hello Adam</h1>"
+```
+
+If the template is an object, each property is an attribute, except:
+
+- `html`: the content 
 
 ## Inception
 
@@ -42,7 +56,7 @@ Inspired by [json2html](http://www.json2html.com/)
 
 Feel free to [file issues](https://github.com/ajlopez/SimpleJsonHtml) and submit
 [pull requests](https://github.com/ajlopez/SimpleJsonHtml/pulls) — contributions are
-welcome.
+welcome<
 
 If you submit a pull request, please be sure to add or update corresponding
 test cases, and ensure that `npm test` continues to pass.
