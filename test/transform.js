@@ -26,3 +26,8 @@ var result = sjh.transform({ h1: { "class": "main", "html": "Hello ${name}" }}, 
 
 assert.ok(result);
 assert.equal(result, "<h1 class='main'>Hello Adam</h1>");
+
+var result = sjh.transform({ h1: { "checked": null, "html": "Hello ${name}" }}, { name: 'Adam' });
+
+assert.ok(result);
+assert.equal(result, "<h1 checked>Hello Adam</h1>");
