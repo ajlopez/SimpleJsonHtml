@@ -12,3 +12,8 @@ var result = sjh.transform({ h1: "Hello" }, null);
 assert.ok(result);
 assert.equal(result, "<h1>Hello</h1>");
 
+var result = sjh.transform("Hello ${name}", { name: 'Adam' });
+
+assert.ok(result);
+assert.equal(result, "Hello Adam");
+
