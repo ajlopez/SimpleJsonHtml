@@ -34,6 +34,10 @@ npm test
 
 TBD
 
+## Inception
+
+Inspired by [json2html](http://www.json2html.com/)
+
 ## Contribution
 
 Feel free to [file issues](https://github.com/ajlopez/SimpleJsonHtml) and submit
