@@ -1,7 +1,7 @@
-{ "name": "simpljsonhtml"
+{ "name": "simplejsonhtml"
 , "description": "SimpleJsonHtml generates HTML from a JSON template and a JSON model"
 , "keywords": [ "json", "html", "template" ]
-, "version": "0.0.1alpha"
+, "version": "0.0.1alph"
 , "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)"
 , "repository": { "type": "git", "url": "git://github.com/ajlopez/SimpleJsonHtml.git" }
 , "main": "./lib/simplejsonhtml.js"
